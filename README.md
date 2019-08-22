@@ -16,10 +16,12 @@ Folder
 Folder
 **topologies** contains topologies of the employed molecules in Gromacs format (i.e. *.itp files). 
 This includes:
+
 ECC-lipids:
 - phospholipids POPC & POPS
 - SPC/E water model
 - ECC cations and anions
+
 Amber lipid14/17:
 - phospholipids POPC & POPS
 - TIP3p water model
