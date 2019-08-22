@@ -1,0 +1,30 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Topology of ions for gromacs using ;
+; sigma (nm) and epsilon (kJ/mol)    ;
+; Author: Hector martinez-Seara      ;
+; v.6.1                              ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ atomtypes ]
+;name  at.num    mass      charge   ptype   sigma     epsilon
+  Ca_d  20      40.07800    2.000     A     0.291320  0.41840000 ; DOI: 10.1021/jp064661f ; Dang2006
+  Ca_g0 20      40.078      2.00      A     0.281311  0.50691700 ; DOI: 10.1002/jcc.20090 ; GROMOS53a6, exact conversion from C6,C12 to sigma,epsilon
+  Ca_g  20      40.078      2.00      A     0.281960  0.50725000 ; DOI: 10.1021/jp5005693, minor modification from Ca_g0
+  Ca_s  20      40.07800    1.500     A     0.253800  0.50725000 ; DOI: 10.1021/jp5005693 ; Jungwirth2014 ; scaled ; ECCR (Note: Based on Ca_g)
+  Ca_2s 20      40.07800    1.500     A     0.266558  0.50725000 ; DOI: unpublished ; Jungwirth2016 ; scaled ; ECCR+~5% sigma ; (Note: Based on Ca_g); (preferred parameters)
+  Cl_d  17      35.45300   -1.000     A     0.440000  0.41840000 ; DOI: 10.1063/1.466363  ; Dang1994 ; (Default amber)
+  Cl_2d 17      35.45300   -1.000     A     0.433870  0.41840000 ; DOI: 10.1021/jp064661f ; Dang2006
+  Cl_o  17      35.45300   -1.00      A     0.441700  0.49280000 ; DOI: 10.1021/ja00316a012 ; OPLSAA FF 
+  Cl_r  17      35.45300   -1.000     A     0.454000  0.62802000 ; DOI: 10.1016/S0006-3495(96)79511-5  ; Roux1996
+  Cl_s  17      35.45300   -0.750     A     0.378240  0.41840000 ; DOI: 10.1021/jp5005693 ; Jungwirth2014a ; scaled
+  Cl_2s 17      35.45300   -0.750     A     0.410000  0.49280000 ; DOI: 10.1080/00268976.2013.875231 ; Jungwirth2014b ; scaled (Note: Based on Cl_o)
+  K_d   19      39.09830    1.000     A     0.304700  0.41840000 ; DOI: 10.1021/jp064661f ; Dang2006
+  K_r   19      39.09830    1.000     A     0.352750  0.36425160 ; DOI: 10.1063/1.466711 ; Roux1994
+  K_s   19      39.09830    0.750     A     0.315400  0.41868000 ; DOI: 10.1021/jp3008267 ; Mason2012
+  Li_s   3       6.94100    0.750     A     0.180000  0.07647000 ; DOI: 10.1080/00268976.2013.875231 ; Pluharova2014; scaled
+  Mg_c  12      24.305      2.000     A     0.18900   3.661000   ; DOI: 10.1021/jp909132a; Callahan2010; full charges
+  Mg_ss 12      24.305      1.500     A     0.13600   3.661000   ; DOI:10.1021/acs.jpcb.7b09612; Duboué-Dijon2017; MG_scaled charge "small" version
+  Mg_sb 12      24.305      1.500     A     0.15500   3.661000   ; DOI:10.1021/acs.jpcb.7b09612; Duboué-Dijon2017; MG_scaled charge "big" version
+  Na_d  11      22.98977    1.000     A     0.235000  0.54390000 ; DOI: 10.1063/1.466363  ; Dang1994
+  Na_r  11      22.98977    1.000     A     0.272750  0.19636092 ; DOI: 10.1063/1.466711 ; Roux1994
+  Na_s  11      22.98977    0.750     A     0.211500  0.54428400 ; DOI: 10.1021/acs.jpcb.5b05221 ; Jungwirth2015 ; scaled
